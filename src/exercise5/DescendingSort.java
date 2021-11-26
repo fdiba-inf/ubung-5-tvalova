@@ -25,8 +25,8 @@ public class DescendingSort {
         }
       }
       int temp = numbers[minIndex];
-        numbers[minIndex] = numbers[i];
-        numbers[i] = temp;
+      numbers[minIndex] = numbers[i];
+      numbers[i] = temp;
     }
     // Sort numbers in descending order
 

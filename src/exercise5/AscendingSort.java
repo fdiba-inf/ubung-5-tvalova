@@ -16,7 +16,18 @@ public class AscendingSort {
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
-
+        
+        for (int i = 0; i < numbers.length - 1; i++) {
+          int maxIndex = i;
+          for (int j = i + 1; j < numbers.length; j++) {
+            if (numbers[j] > numbers[maxIndex]) {
+              maxIndex = j;
+            }
+            int temp = numbers[maxIndex];
+            numbers[maxIndex] = numbers[j];
+            numbers[j] = temp;
+         }
+       }
         // Sort numbers in ascending order
 
         String numbersAsString = Arrays.toString(numbers);
